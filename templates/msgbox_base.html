@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
     
     <title>逢甲選課留言板</title>
 </head>
@@ -19,38 +19,34 @@
     <div class="container">
       <div class="row">
         <div class="col">
+            
             {% for one_msg in msgs %}
-                <div class="alert alert-dark" role="alert">{{one_msg.msg}}</div>
+                
+            <p class="h6 border border-dark">{{one_msg.msg}}</p>
+               
             {% endfor %}
+            
         </div>
       </div>
     </div>
     
-   
-   
-   
-    <!-- <form action="/msgbox/" method="POST" name="mas_test"> -->
-    <!-- {% csrf_token %} -->
-    <!-- <div> -->
-        <!-- 輸入訊息<input type="text" name="msg"/> -->
-        <!-- <input type="submit"  class="btn btn-primary" value="送出訊息" /> -->
-    <!-- </div> -->
-    
-    
-    <div class="container">
-    
-        <form action="/msgbox/" method="POST" name="mas_test">
-        {% csrf_token %}
-          <div class="form-group">
-            <input type="text" class="form-control" name="msg" placeholder="訊息">
-          </div>
-          <div class="row justify-content-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </form>
+   <div class="fixed-bottom">
+        <div class="container">
         
+            <form action="/msgbox/" method="POST" name="mas_test">
+            {% csrf_token %}
+              <div class="form-group">
+                <input type="text" class="form-control" name="msg" placeholder="訊息">
+              </div>
+              
+              <div class="row justify-content-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+              
+            </form>
+            
+        </div>
     </div>
-        
         
     </form>   
     
