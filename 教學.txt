@@ -1,0 +1,27 @@
+開啟新專案
+
+django-admin startproject locallibrary
+
+
+
+新增專案下的APP
+
+python3 manage.py startapp catalog
+
+
+
+
+
+如果改model 則資料庫要更新 與同步
+
+python3 manage.py makemigrations
+
+python3 manage.py migrate
+
+
+
+
+
+開啟伺服器
+
+python3 manage.py runserver
